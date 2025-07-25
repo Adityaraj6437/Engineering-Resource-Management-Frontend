@@ -35,7 +35,7 @@ const CreateProject = () => {
           .map((skill) => skill.trim()),
       };
 
-      await axios.post("http://localhost:5000/api/projects/", body, {
+      await axios.post("https://engineering-resource-management-bac.vercel.app/api/projects/", body, {
         headers: { Authorization: `Bearer ${token}` },
       });
 

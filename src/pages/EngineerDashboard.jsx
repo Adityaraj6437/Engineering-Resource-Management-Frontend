@@ -20,10 +20,10 @@ const EngineerDashboard = () => {
     const loadData = async () => {
       try {
         const [assignmentsRes, capacityRes] = await Promise.all([
-          axios.get("http://localhost:5000/api/assignments", {
+          axios.get("https://engineering-resource-management-bac.vercel.app/api/assignments", {
             headers: { Authorization: `Bearer ${token}` },
           }),
-          axios.get(`http://localhost:5000/api/engineers/engineer/capacity/${user._id}`, {
+          axios.get(`https://engineering-resource-management-bac.vercel.app/api/engineers/engineer/capacity/${user._id}`, {
             headers: { Authorization: `Bearer ${token}` },
           }),
         ]);

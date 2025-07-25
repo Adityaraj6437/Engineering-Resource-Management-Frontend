@@ -18,7 +18,7 @@ export const AuthProvider = ({ children }) => {
       }
 
       try {
-        const res = await axios.get("http://localhost:5000/api/auth/profile", {
+        const res = await axios.get("https://engineering-resource-management-bac.vercel.app/api/auth/profile", {
           headers: { Authorization: `Bearer ${token}` },
         });
         setUser(res.data);
@@ -35,7 +35,7 @@ export const AuthProvider = ({ children }) => {
 
   // Login
   const login = async (email, password) => {
-    const res = await axios.post("http://localhost:5000/api/auth/login", { email, password });
+    const res = await axios.post("https://engineering-resource-management-bac.vercel.app/api/auth/login", { email, password });
     const jwt = res.data.token;
     localStorage.setItem("token", jwt);
     setToken(jwt);

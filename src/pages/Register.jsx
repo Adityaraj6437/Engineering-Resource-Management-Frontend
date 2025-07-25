@@ -32,7 +32,7 @@ const Register = () => {
     };
 
     try {
-      await axios.post("http://localhost:5000/api/auth/register", payload);
+      await axios.post("https://engineering-resource-management-bac.vercel.app/api/auth/register", payload);
       navigate("/login");
     } catch (err) {
       setError(err.response?.data?.message || "Registration failed");

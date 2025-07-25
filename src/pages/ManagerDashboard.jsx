@@ -16,13 +16,13 @@ const ManagerDashboard = () => {
   useEffect(() => {
     const fetchEngineers = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/engineers/engineers", {
+        const res = await axios.get("https://engineering-resource-management-bac.vercel.app/api/engineers/engineers", {
           headers: { Authorization: `Bearer ${token}` },
         });
 
         const enriched = await Promise.all(
           res.data.map(async (eng) => {
-            const capRes = await axios.get(`http://localhost:5000/api/engineers/engineer/capacity/${eng._id}`, {
+            const capRes = await axios.get(`https://engineering-resource-management-bac.vercel.app/api/engineers/engineer/capacity/${eng._id}`, {
               headers: { Authorization: `Bearer ${token}` },
             });
 
