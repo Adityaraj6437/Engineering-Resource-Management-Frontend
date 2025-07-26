@@ -18,7 +18,7 @@ export const AuthProvider = ({ children }) => {
       }
 
       try {
-        const res = await axios.get("https://engineering-resource-management-bac.vercel.app/api/auth/profile", {
+        const res = await axios.get("https://engineering-resource-management-backend-2.onrender.com/api/auth/profile", {
           headers: { Authorization: `Bearer ${token}` },
         });
         setUser(res.data);
