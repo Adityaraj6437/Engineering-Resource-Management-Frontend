@@ -15,7 +15,7 @@ const Projects = () => {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const res = await axios.get("https://engineering-resource-management-bac.vercel.app/api/projects/", {
+        const res = await axios.get("https://engineering-resource-management-backend-2.onrender.com/api/projects/", {
           headers: { Authorization: `Bearer ${token}` },
         });
         setProjects(res.data);

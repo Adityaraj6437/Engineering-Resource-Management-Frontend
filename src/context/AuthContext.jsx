@@ -35,7 +35,7 @@ export const AuthProvider = ({ children }) => {
 
   // Login
   const login = async (email, password) => {
-    const res = await axios.post("https://engineering-resource-management-bac.vercel.app/api/auth/login", { email, password });
+    const res = await axios.post("https://engineering-resource-management-backend-2.onrender.com/api/auth/login", { email, password });
     const jwt = res.data.token;
     localStorage.setItem("token", jwt);
     setToken(jwt);

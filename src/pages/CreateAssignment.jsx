@@ -24,10 +24,10 @@ const CreateAssignment = () => {
     const fetchOptions = async () => {
       try {
         const [engRes, projRes] = await Promise.all([
-          axios.get("https://engineering-resource-management-bac.vercel.app/api/engineers/engineers", {
+          axios.get("https://engineering-resource-management-backend-2.onrender.com/api/engineers/engineers", {
             headers: { Authorization: `Bearer ${token}` },
           }),
-          axios.get("https://engineering-resource-management-bac.vercel.app/api/projects/", {
+          axios.get("https://engineering-resource-management-backend-2.onrender.com/api/projects/", {
             headers: { Authorization: `Bearer ${token}` },
           }),
         ]);
@@ -47,7 +47,7 @@ const CreateAssignment = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("https://engineering-resource-management-bac.vercel.app/api/assignments/", form, {
+      await axios.post("https://engineering-resource-management-backend-2.onrender.com/api/assignments/", form, {
         headers: { Authorization: `Bearer ${token}` },
       });
       navigate("/assignments");

@@ -13,7 +13,7 @@ const Assignments = () => {
   useEffect(() => {
     const fetchAssignments = async () => {
       try {
-        const res = await axios.get("https://engineering-resource-management-bac.vercel.app/api/assignments/", {
+        const res = await axios.get("https://engineering-resource-management-backend-2.onrender.com/api/assignments/", {
           headers: { Authorization: `Bearer ${token}` },
         });
         setAssignments(res.data);
